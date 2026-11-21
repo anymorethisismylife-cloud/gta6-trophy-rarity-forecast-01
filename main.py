@@ -58,7 +58,10 @@ Z_SCORES = [-1.6448536269514722, -0.6744897501960817, 0.0,
 WINDOW_HOURS = 24.0      # reads used for a trophy's slope: the last day
 SHRINK_K = 6.0           # effective reads' worth of weight on the tier slope
 RW_SIGMA = 0.5           # logit random-walk sigma per sqrt(day)
-SPREAD_MULT = 0.8        # global multiplier on the combined spread
+SPREAD_MULT = 0.7        # global multiplier on the combined spread
+                         # (0.8 -> 0.7 on 2026-11-21 probe: pooled sims
+                         # 0.2109 -> 0.1913, both DGPs, coverage intact;
+                         # see STATUS.md probe note)
 SPREAD_MIN = 0.05        # never claim to know a rate that precisely
 SPREAD_MAX = 3.0         # never spread wider than this on the logit scale
 FALLBACK_RATE = 1.0      # median percent when a trophy was never observed
